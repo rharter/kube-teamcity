@@ -1,0 +1,19 @@
+{
+  "kind": "Service",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "teamcity-loadbalancer"
+  },
+  "spec": {
+    "ports": [
+      {
+        "port": 80,
+        "targetPort": 8111
+      }
+    ],
+    "selector": {
+      "name": "teamcity"
+    },
+    "type": "LoadBalancer"
+  }
+}

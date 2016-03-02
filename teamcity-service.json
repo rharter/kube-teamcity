@@ -1,0 +1,21 @@
+{
+  "kind": "Service",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "teamcity"
+  },
+  "spec": {
+    "metadata": {
+      "name": "teamcity"
+    },
+    "ports": [
+      {
+        "port": 8111,
+        "targetPort": "teamcity"
+      }
+    ],
+    "selector": {
+      "name": "teamcity"
+    }
+  }
+}
